@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "api": "npm run dev --workspace=backend",
+    "web:user": "npm run dev --workspace=frontend-main",
+    "web:admin": "npm run dev --workspace=admin",
+    "web:seller": "npm run dev --workspace=seller",
+    "backend": "npm run dev --workspace=backend",
     "prepare": "husky install",
     "lint": "node node_modules/prettier/bin/prettier.cjs --check \"**/*.{js,json,ts,yml,yaml}\"",
     "prettier": "node node_modules/prettier/bin/prettier.cjs --check '**/*.{js,json,ts,yml,yaml}'",
     "prettier:write": "node node_modules/prettier/bin/prettier.cjs --write \"**/*.{js,json,ts,yml,yaml}\""
   },
   "workspaces": [
-    "packages/*"
+    "apps/*"
   ],
   "keywords": [],
   "author": "",
